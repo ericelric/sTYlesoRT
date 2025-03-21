@@ -3,6 +3,7 @@
   color: var(--input-text);
   font-family: monospace;
   overflow-x: auto;
+  text-wrap: auto;
 }
 
 .hljs-selector-class,
