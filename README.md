@@ -10,9 +10,9 @@
 
 ## **Features**
 
-- **Automatic CSS Sorting**: Organizes properties alphabetically for cleaner code.
-- **Dark & Light Mode**: Automatically adapts to the system theme, with manual override.
-- **Copy to Clipboard**: One-click copy for quick use.
+- **Automatic CSS Sorting**: Organizes properties alphabetically for cleaner code
+- **Dark & Light Mode**: Automatically adapts to the system theme, with manual override
+- **Copy to Clipboard**: One-click copy for quick use
 - **Fast & Lightweight**: Built with Vue 3 and Vite
 
 ## **Tech Stack**
