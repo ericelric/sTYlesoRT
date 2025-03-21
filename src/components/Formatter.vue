@@ -23,13 +23,37 @@ const formatCSS = () => {
   outputCSS.value = inputCSS.value.replace(
     /([^{]+)\{([^}]+)\}/g,
     (match, selector, properties) => {
-      const sortedProperties = properties
-        .split(';')
-        .map((prop) => prop.trim())
-        .filter((prop) => prop.length > 0)
-        .sort((a, b) => a.localeCompare(b))
-        .join(';\n  ');
-      return `${selector}{\n  ${sortedProperties};\n}`;
+      // Split into lines, preserve whitespace
+      const lines = properties.split('\n').map((line) => line.trim());
+
+      // Store properties with their respective comments
+      const propertiesWithComments = [];
+      let currentComments = [];
+
+      lines.forEach((line) => {
+        if (line.startsWith('/*')) {
+          currentComments.push(line); // Collect comments
+        } else if (line.length > 0) {
+          propertiesWithComments.push({
+            property: line.replace(/;$/, ''),
+            comments: [...currentComments],
+          });
+          currentComments = []; // Reset comment buffer after attaching it to a property
+        }
+      });
+
+      // Sort properties alphabetically while keeping associated comments
+      propertiesWithComments.sort((a, b) =>
+        a.property.localeCompare(b.property)
+      );
+
+      // Reconstruct formatted CSS block
+      const formattedLines = propertiesWithComments.flatMap((entry) => [
+        ...entry.comments,
+        entry.property + ';',
+      ]);
+
+      return `${selector} {\n  ${formattedLines.join('\n  ')}\n}`;
     }
   );
 
