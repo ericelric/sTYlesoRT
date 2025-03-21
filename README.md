@@ -4,7 +4,7 @@
 
 <h1 align="center">sTYlesoRT - Let Your CSS Flow In Order<</h1>
 
-**sTYlesoRT** is a simple CSS formatting tool that sorts your CSS properties alphabetically, ensuring a clean and consistent code structure.
+**sTYlesoRT** is a simple CSS formatting tool that sorts your CSS properties alphabetically, ensuring a consistent code structure.
 
 🚀 **Live Demo:** [stylesort.vercel.app](https://stylesort.vercel.app)
 
