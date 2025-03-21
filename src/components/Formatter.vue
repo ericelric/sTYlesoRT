@@ -120,6 +120,7 @@ defineExpose({
   color: var(--input-text);
   field-sizing: content;
   flex: 1;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   min-height: calc(40vw - 2rem);
   padding: 1rem;
