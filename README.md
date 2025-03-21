@@ -19,8 +19,8 @@
 
 - [Vue 3](https://vuejs.org/)
 - [Vite](https://vitejs.dev/)
-- [Highlight.js](https://highlightjs.org/) for syntax highlighting
-- [Oh Vue Icons](https://oh-vue-icons.js.org/) for icons
+- [Highlight.js](https://highlightjs.org/)
+- [Oh Vue Icons](https://oh-vue-icons.js.org/)
 
 ## **Getting Started**
 
