@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Pacifico&family=Poiret+One&display=swap');
+
+:root {
+  --background: #fff;
+  --editor-background: #fff;
+  --text-color: #000;
+  --button-text: #fff;
+  --border-color: #121212;
+  --shadow: #121212;
+  --input-text: #000;
+  --highlight-primary: #ff1d58;
+  --highlight-secondary: #0049b7;
+  --hover: #ffe772;
+  --bluish-grey: #6272a4;
+}
+
+[data-theme='dark'] {
+  --background: #121212;
+  --editor-background: #1e1e1e;
+  --text-color: #fff;
+  --border-color: #efefef;
+  --shadow: #efefef;
+  --input-text: #fff;
+  --highlight-primary: #aa5bfc;
+  --highlight-secondary: #43b883;
+  --hover: #ffe772;
+  --bluish-grey: #6b7893;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: var(--background);
+  color: var(--text-color);
+  font-family: 'Major Mono Display', monospace;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  min-height: 100vh;
+}

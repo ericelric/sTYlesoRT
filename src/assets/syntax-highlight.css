@@ -1,0 +1,28 @@
+.code-block {
+  background: var(--background);
+  color: var(--input-text);
+  font-family: monospace;
+  overflow-x: auto;
+}
+
+.hljs-selector-class,
+.hljs-selector-tag,
+.hljs-selector-id,
+.hljs-keyword,
+.hljs-string {
+  color: var(--highlight-primary);
+}
+
+.hljs-number,
+.hljs-built_in {
+  color: var(--highlight-secondary);
+}
+
+.hljs-selector-pseudo {
+  color: var(--bluish-grey);
+}
+
+.hljs-comment {
+  color: light-dark(#6272a4, #6272a4);
+  font-style: italic;
+}
