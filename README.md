@@ -1,5 +1,8 @@
-# **sTYlesoRT**
-> Let your CSS flow in order
+<div align="center" dir="auto">
+   <a href="https://stylesort.vercel.app" rel="nofollow"><img width="250" alt="logo" src="https://github.com/user-attachments/assets/ce3296fe-28a4-4c64-b1ce-4d2fdfb5dd8a"></a><br>
+</div>
+
+<h1 align="center">sTYlesoRT - Let your CSS flow in order</h1>
 
 **sTYlesoRT** is a simple CSS formatting tool that sorts your CSS properties alphabetically, ensuring a clean and consistent code structure.
 
@@ -18,12 +21,6 @@
 - [Vite](https://vitejs.dev/)
 - [Highlight.js](https://highlightjs.org/) for syntax highlighting
 - [Oh Vue Icons](https://oh-vue-icons.js.org/) for icons
-
-
-## **Screenshot**
-<img width="1595" alt="Screenshot 2025-03-22 at 00 42 27" src="https://github.com/user-attachments/assets/eef03654-c4e3-487e-8d0e-4a6c3b50f40c" />
-<img width="1595" alt="Screenshot 2025-03-22 at 00 42 33" src="https://github.com/user-attachments/assets/62b56e67-37a3-4510-96cc-b3a66ba01107" />
-
 
 ## **Getting Started**
 
@@ -55,6 +52,10 @@
 3. Copy the formatted CSS by clicking the clip button.
 
 4. Toggle between light and dark mode manually or follow the system preferences.
+
+## **Screenshot**
+<img width="1595" alt="Screenshot 2025-03-22 at 00 42 27" src="https://github.com/user-attachments/assets/eef03654-c4e3-487e-8d0e-4a6c3b50f40c" />
+<img width="1595" alt="Screenshot 2025-03-22 at 00 42 33" src="https://github.com/user-attachments/assets/62b56e67-37a3-4510-96cc-b3a66ba01107" />
 
 ---
 
