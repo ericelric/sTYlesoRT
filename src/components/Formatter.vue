@@ -120,16 +120,12 @@ defineExpose({
   color: var(--input-text);
   field-sizing: content;
   flex: 1;
-  line-height: 1.5;
+  line-height: 1.25rem;
   min-height: calc(40vw - 2rem);
   padding: 1rem;
   resize: none;
   text-wrap: auto;
   word-break: break-all;
-}
-
-.editor__input {
-  line-height: 1.8;
 }
 
 .editor__input:focus {
