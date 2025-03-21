@@ -5,31 +5,25 @@
 
 🚀 **Live Demo:** [stylesort.vercel.app](https://stylesort.vercel.app)
 
----
-
 ## **Features**
 
-- ✅ **Automatic CSS Sorting** – Organizes properties alphabetically for cleaner code.
-- 🌗 **Dark & Light Mode** – Automatically adapts to the system theme, with manual override.
-- 📋 **Copy to Clipboard** – One-click copy for quick use.
-- ⚡ **Fast & Lightweight** – Built with Vue 3 and Vite
-
----
-
-## **Screenshot**
-
-![StyleSort Screenshot](https://your-image-url.com) *(Replace with actual screenshot URL)*
-
----
+- **Automatic CSS Sorting**: Organizes properties alphabetically for cleaner code.
+- **Dark & Light Mode**: Automatically adapts to the system theme, with manual override.
+- **Copy to Clipboard**: One-click copy for quick use.
+- **Fast & Lightweight**: Built with Vue 3 and Vite
 
 ## **Tech Stack**
 
-- [Vue 3](https://vuejs.org/) (Composition API)
+- [Vue 3](https://vuejs.org/)
 - [Vite](https://vitejs.dev/)
 - [Highlight.js](https://highlightjs.org/) for syntax highlighting
 - [Oh Vue Icons](https://oh-vue-icons.js.org/) for icons
 
----
+
+## **Screenshot**
+<img width="1595" alt="Screenshot 2025-03-22 at 00 42 27" src="https://github.com/user-attachments/assets/eef03654-c4e3-487e-8d0e-4a6c3b50f40c" />
+<img width="1595" alt="Screenshot 2025-03-22 at 00 42 33" src="https://github.com/user-attachments/assets/62b56e67-37a3-4510-96cc-b3a66ba01107" />
+
 
 ## **Getting Started**
 
@@ -54,13 +48,13 @@
 
 ## Usage
 
-1. Paste your **CSS** into the input area.
+1. Paste your CSS into the input area.
 
-2. Click the **magic wand** ✨ button to sort properties alphabetically.
+2. Click the magic wand to sort the properties alphabetically.
 
-3. Copy the formatted CSS with a single click.
+3. Copy the formatted CSS by clicking the clip button.
 
-4. Toggle between **light & dark mode** manually or follow system preferences.
+4. Toggle between light and dark mode manually or follow the system preferences.
 
 ---
 
