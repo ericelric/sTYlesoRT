@@ -2,29 +2,29 @@
 
 :root {
   --background: #fff;
-  --editor-background: #fff;
-  --text-color: #000;
-  --button-text: #fff;
+  --bluish-grey: #6272a4;
   --border-color: #121212;
-  --shadow: #121212;
-  --input-text: #000;
+  --button-text: #fff;
+  --editor-background: #fff;
   --highlight-primary: #ff1d58;
   --highlight-secondary: #0049b7;
   --hover: #ffe772;
-  --bluish-grey: #6272a4;
+  --input-text: #000;
+  --shadow: #121212;
+  --text-color: #000;
 }
 
 [data-theme='dark'] {
   --background: #121212;
-  --editor-background: #1e1e1e;
-  --text-color: #fff;
+  --bluish-grey: #6b7893;
   --border-color: #efefef;
-  --shadow: #efefef;
-  --input-text: #fff;
+  --editor-background: #1e1e1e;
   --highlight-primary: #aa5bfc;
   --highlight-secondary: #43b883;
   --hover: #ffe772;
-  --bluish-grey: #6b7893;
+  --input-text: #fff;
+  --shadow: #efefef;
+  --text-color: #fff;
 }
 
 *,
