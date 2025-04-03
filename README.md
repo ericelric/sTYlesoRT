@@ -1,5 +1,5 @@
 <div align="center" dir="auto">
-   <a href="https://stylesort.vercel.app" rel="nofollow"><img width="250" alt="logo" src="https://github.com/user-attachments/assets/d4cfce93-22fd-499b-a34d-a9341ff641cb"></a><br>
+   <a href="https://stylesort.vercel.app" rel="nofollow"><img width="250" alt="logo" src="https://github.com/user-attachments/assets/87099940-fa97-4bb2-bc92-ad084c880113"></a><br>
 </div>
 
 <h1 align="center">sTYlesoRT - Let Your CSS Flow In Order<</h1>
