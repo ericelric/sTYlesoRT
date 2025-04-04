@@ -2,7 +2,7 @@
    <a href="https://stylesort.vercel.app" rel="nofollow"><img width="200" alt="logo" src="https://github.com/user-attachments/assets/87099940-fa97-4bb2-bc92-ad084c880113"></a><br>
 </div>
 
-<h1 align="center">sTYlesoRT - Let Your CSS Flow In Order<</h1>
+<h1 align="center">sTYlesoRT - Let Your CSS Flow In Order</h1>
 
 **sTYlesoRT** is a simple CSS formatting tool that sorts your CSS properties alphabetically, ensuring a consistent code structure.
 
