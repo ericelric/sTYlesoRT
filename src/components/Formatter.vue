@@ -20,42 +20,72 @@ const highlightedCSS = computed(() => {
 });
 
 const formatCSS = () => {
-  outputCSS.value = inputCSS.value.replace(
-    /([^{]+)\{([^}]+)\}/g,
-    (match, selector, properties) => {
-      // Split into lines, preserve whitespace
-      const lines = properties.split('\n').map((line) => line.trim());
+  const blockRegex = /([^{]+)\{([^}]+)\}/gs;
+  const formattedBlocks = [];
 
-      // Store properties with their respective comments
-      const propertiesWithComments = [];
-      let currentComments = [];
+  const matches = [...inputCSS.value.matchAll(blockRegex)];
 
-      lines.forEach((line) => {
-        if (line.startsWith('/*')) {
-          currentComments.push(line); // Collect comments
-        } else if (line.length > 0) {
-          propertiesWithComments.push({
-            property: line.replace(/;$/, ''),
-            comments: [...currentComments],
-          });
-          currentComments = []; // Reset comment buffer after attaching it to a property
+  matches.forEach(([, selector, blockContent]) => {
+    const lines = blockContent.split('\n');
+
+    const properties = [];
+    let currentProperty = [];
+    let parenthesesBalance = 0;
+
+    const flushProperty = () => {
+      if (currentProperty.length > 0) {
+        properties.push(currentProperty.slice());
+        currentProperty = [];
+        parenthesesBalance = 0;
+      }
+    };
+
+    lines.forEach((line) => {
+      const trimmed = line.trim();
+      if (!trimmed) return;
+
+      currentProperty.push(trimmed);
+
+      // Count open/close parentheses to detect multiline property blocks
+      const open = (trimmed.match(/\(/g) || []).length;
+      const close = (trimmed.match(/\)/g) || []).length;
+      parenthesesBalance += open - close;
+
+      if (parenthesesBalance === 0 && trimmed.endsWith(';')) {
+        flushProperty();
+      }
+    });
+
+    flushProperty();
+
+    // Sort properties alphabetically by their first line
+    properties.sort((a, b) => {
+      const aProp = a[0].split(':')[0].trim();
+      const bProp = b[0].split(':')[0].trim();
+      return aProp.localeCompare(bProp);
+    });
+
+    const formattedProps = properties
+      .map((propLines) => {
+        if (propLines.length === 1) {
+          return `  ${propLines[0]}`;
+        } else {
+          return (
+            `  ${propLines[0]}\n` +
+            propLines
+              .slice(1)
+              .map((l) => `      ${l}`)
+              .join('\n')
+          );
         }
-      });
+      })
+      .join('\n');
 
-      // Sort properties alphabetically while keeping associated comments
-      propertiesWithComments.sort((a, b) =>
-        a.property.localeCompare(b.property)
-      );
+    const formattedBlock = `${selector.trim()} {\n${formattedProps}\n}`;
+    formattedBlocks.push(formattedBlock);
+  });
 
-      // Reconstruct formatted CSS block
-      const formattedLines = propertiesWithComments.flatMap((entry) => [
-        ...entry.comments,
-        entry.property + ';',
-      ]);
-
-      return `${selector} {\n  ${formattedLines.join('\n  ')}\n}`;
-    }
-  );
+  outputCSS.value = formattedBlocks.join('\n\n');
 
   nextTick(() => hljs.highlightAll());
 };
