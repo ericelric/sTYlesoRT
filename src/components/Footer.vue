@@ -7,7 +7,10 @@ addIcons(IoLogoGithub);
 <template>
   <footer class="footer">
     <span class="footer__text">© 2025 by Eric Elric</span>
-    <a class="footer__link" href="#" title="View this project on GitHub"
+    <a
+      class="footer__link"
+      href="https://github.com/ericelric/sTYlesoRT"
+      title="View this project on GitHub"
       ><OhVueIcon name="io-logo-github" scale="1"
     /></a>
   </footer>
